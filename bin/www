@@ -4,6 +4,15 @@
  * Module dependencies.
  */
 
+const appInsights = require('applicationinsights');
+appInsights.setup().start();
+
+let client = appInsights.defaultClient;
+client.trackRequest({name:"GET /"});
+
+
+console.log("Application is starting...");
+
 const app = require('../app');
 const debug = require('debug')('node5:server');
 const http = require('http');

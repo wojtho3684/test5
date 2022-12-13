@@ -1,9 +1,3 @@
-const appInsights = require('applicationinsights');
-appInsights.start();
-console.log("Application starting...");
-const client = appInsights.defaultClient;
-client.trackRequest({name:"GET /calc"});
-
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
